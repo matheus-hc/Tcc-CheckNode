@@ -23,3 +23,4 @@ flask run Acesse o sistema no navegador em: http://localhost:5000.
 📚 Tecnologias utilizadas Backend: Flask (Python) Frontend: Bootstrap e HTML Banco de Dados: SQLite Outros: SQLAlchemy, Flask-Migrate
 
 🌟 Objetivo principal Este sistema foi desenvolvido com o intuito de facilitar o monitoramento de atualizações em repositórios Git, promovendo maior segurança e eficiência no ciclo de desenvolvimento de software. Ele é ideal para equipes que desejam manter suas dependências atualizadas de maneira automatizada e organizada.
+
