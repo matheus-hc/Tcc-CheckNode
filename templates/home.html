@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Sistema de Monitoramento{% endblock %}
+
+{% block content %}
+    <h1 class="mt-4">Bem-vindo ao Sistema de Monitoramento</h1>
+    <p>Visualize e gerencie seus repositórios abaixo:</p>
+    
+    <!-- Listagem de repositórios como cards -->
+    <div class="row">
+        {% for repo in repositorios %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ repo.nome }}</h5>
+                    <p class="card-text">URL: <a href="{{ repo.url }}" target="_blank">{{ repo.url }}</a></p>
+                    <p class="card-text">Periodicidade: {{ repo.periodicidade }} dias</p>
+                    <form action="{{ url_for('delete_repo', id=repo.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                    <form action="{{ url_for('send_email', id=repo.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-primary">Enviar E-mail</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- Botão para cadastrar novo repositório -->
+    <a href="{{ url_for('register_repo') }}" class="btn btn-primary">Cadastrar Novo Repositório</a>
+{% endblock %}
