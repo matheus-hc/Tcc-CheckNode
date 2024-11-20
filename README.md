@@ -6,16 +6,22 @@ Como rodar o sistema: Siga os passos abaixo para configurar e executar o sistema
 
 Clone o repositório
 git clone https://github.com/matheus-hc/tcc.git 
+
 cd TCC
 
 Crie e ative o ambiente virtual
-python -m venv venv source venv/bin/activate # Linux/Mac venv\Scripts\activate # Windows
+
+python -m venv venv
+venv\Scripts\activate
 
 Instale as dependências
+
 pip install -r requirements.txt
 
 Configure o banco de dados Execute os seguintes comandos para configurar o banco de dados:
-flask db init flask db migrate -m "Inicializando o banco de dados" flask db upgrade
+flask db init
+flask db migrate -m "Inicializando o banco de dados" 
+flask db upgrade
 
 Execute o servidor Inicie a aplicação:
 flask run Acesse o sistema no navegador em: http://localhost:5000.
