@@ -5,7 +5,7 @@
 Como rodar o sistema: Siga os passos abaixo para configurar e executar o sistema localmente:
 
 Clone o repositório
-git clone https://github.com/matheus-hc/tcc.git 
+git clone https://github.com/matheus-hc/Tcc-CheckNode.git
 
 cd TCC
 
